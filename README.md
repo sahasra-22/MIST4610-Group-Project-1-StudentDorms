@@ -20,9 +20,11 @@ Data Model: <br>
   The model also includes MaintenanceRequests, which connect rooms to UGAStaff members responsible for resolving maintenance issues. This allows the system to record who submitted the request, which room it pertains to, and which staff member completed the work. Finally, the Parking entity tracks parking locations and associates them with students who have been assigned parking spaces. <br>
   Overall, the database supports storage of all key data related to housing logistics, such as student assignments, staff information, maintenance activity, and inspection records. However, it does not store financial data such as rent payments or billing, nor does it include academic information like student grades or course enrollment. The model focuses strictly on operational and residential management within university housing. <br>
 
-Data Dictionary:
 
 <img width="1041" height="584" alt="MIST 4610 Project 1 Data Model" src="https://github.com/user-attachments/assets/44f5ebf1-4877-4ef4-88e6-f19bc57d6e14" />
+
+Data Dictionary:
+
 <img width="659" height="271" alt="Screenshot 2025-10-26 at 3 52 04 PM" src="https://github.com/user-attachments/assets/5ee9afce-da50-4589-9406-426ef031b51f" />
 <img width="659" height="387" alt="Screenshot 2025-10-26 at 3 52 23 PM" src="https://github.com/user-attachments/assets/a0b6425a-7337-453f-a17d-953fcf5ca8f2" />
 <img width="655" height="450" alt="Screenshot 2025-10-26 at 3 52 48 PM" src="https://github.com/user-attachments/assets/d2c08db7-c0b2-4aa4-9cfb-8ab58c96deaf" />
