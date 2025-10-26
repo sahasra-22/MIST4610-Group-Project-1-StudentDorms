@@ -1,19 +1,20 @@
 # MIST4610-Group-Project-1-StudentDorms
-Team Name
 
+# **MIST 4610 Group Project 1 Team 3**
+**Team Name** <br>
 59925 Group 3
 
-Team Members: <br>
+**Team Members:** <br>
 David Kenny @djk42296 <br>
 Sahasra Manchikanti @sahasra-22 <br>
 Grant Harris <br>
 Joseph Enck <br>
 Sofia Drescher <br>
 
-Problem Description: <br>
+**Problem Description:** <br>
 The task at hand is to design and develop a relational database for the overall operations of a university housing system. The primary entity in the model is the Residence Hall entity of the housing system, with each Residence Hall representing an individual dormitory facility that the university owns and maintains across campus. The Residence Hall functions alongside dorm floors, student rooms, resident assistants, maintenance requests, and parking assignments that serve the students living within university housing. We aim to accurately represent these relationships, create sample data, and populate the entities and their corresponding attributes with this information. In addition, we intend to perform functional queries on the data so that they may provide meaningful insight into the housing system and its day-to-day operations.
 
-Data Model: <br>
+**Data Model:** <br>
   The data model represents the core operations of a university housing management system. It is designed to store information about residence halls, dorm floors, rooms, students, resident assistants (RAs), university housing staff, maintenance requests, inspections, and parking assignments. Each of these entities interacts in ways that reflect how a real university housing system functions on a daily basis. <br>
   The Residence Hall entity serves as the foundation of the model, with each hall containing multiple Dorm Floors, and each floor consisting of several Rooms. The Students entity stores personal information about each student living on campus, such as their name, phone number, class year, and assigned RA. Each student is connected to a specific room through the DormAssignments table, allowing the database to track which student resides in which room. <br>
   Each Resident Assistant is also linked to both a Dorm Floor and a Student record, representing that RAs are students themselves who oversee a particular floor. The Inspections entity stores information about room inspections conducted by RAs, including the inspection score and the room being inspected. <br>
@@ -23,7 +24,7 @@ Data Model: <br>
 
 <img width="1041" height="584" alt="MIST 4610 Project 1 Data Model" src="https://github.com/user-attachments/assets/44f5ebf1-4877-4ef4-88e6-f19bc57d6e14" />
 
-Data Dictionary:
+**Data Dictionary:**
 
 <img width="659" height="271" alt="Screenshot 2025-10-26 at 3 52 04 PM" src="https://github.com/user-attachments/assets/5ee9afce-da50-4589-9406-426ef031b51f" />
 <img width="659" height="387" alt="Screenshot 2025-10-26 at 3 52 23 PM" src="https://github.com/user-attachments/assets/a0b6425a-7337-453f-a17d-953fcf5ca8f2" />
@@ -36,10 +37,10 @@ Data Dictionary:
 <img width="662" height="353" alt="Screenshot 2025-10-26 at 3 55 23 PM" src="https://github.com/user-attachments/assets/fc556c64-2b71-4bdf-a02b-2c29cc0eb4e9" />
 
 
-Queries:<br>
+**Queries:** <br>
 <img width="680" height="478" alt="Screenshot 2025-10-26 at 3 58 39 PM" src="https://github.com/user-attachments/assets/988d3293-01a6-4e03-934b-3d96f033603e" />
 
-QUERY 1 - ResidenceHallRequests <br>
+**QUERY 1 - ResidenceHallRequests** <br>
 SELECT ResidenceHall.address, COUNT(MaintainanceRequests.requestID) AS NumberOfRequests <br>
 FROM MaintainanceRequests <br>
 JOIN Rooms ON MaintainanceRequests.roomID = Rooms.roomID <br>
@@ -52,7 +53,7 @@ HAVING COUNT(MaintainanceRequests.requestID) > 1; <br>
 
 Query 1 allows managers to see which residence halls have had the most maintenance requests. This helps managers identify which buildings may be experiencing more issues and therefore require more frequent maintenance checks, additional staff, or updated facilities. By listing only halls with more than one request, the query filters out isolated incidents and focuses on areas with recurring problems that may need further investigation. 
 
-QUERY 2 - InspectionStats() <br>
+**QUERY 2 - InspectionStats()** <br>
 SELECT ResidenceHall.address, COUNT(Inspections.inspectionID) AS TotalInspections, <br>
 (SELECT COUNT(*) FROM Inspections JOIN Rooms ON Inspections.roomID = Rooms.roomID <br>
 JOIN DormFloor ON Rooms.DormFloor_floorID = DormFloor.floorID  <br>
@@ -69,7 +70,7 @@ ORDER BY TotalPasses DESC; <br>
 
 Query 2 allows managers to see how many inspections each residence hall has had, along with how many of those inspections passed. This helps managers identify which buildings are performing well during inspections and which may require improvements. Ordering the results by the number of passes allows managers to quickly identify the most compliant residence halls and prioritize those that need additional attention or maintenance.
 
-QUERY 3 - StudentParking <br>
+**QUERY 3 - StudentParking** <br>
 SELECT ResidenceHall.address, COUNT(Students.studentID) AS TotalStudents, <br>
 (COUNT(Students.studentID)-(SELECT COUNT(Parking.studentID) FROM Parking <br>
 JOIN Students ON Parking.studentID = Students.studentID <br>
@@ -85,7 +86,7 @@ ORDER BY StudentsWithoutParking DESC; <br>
 
 Query 3 allows managers to compare the total number of students in each residence hall to the number of those students who have parking spaces. This provides insight into how many students live in each hall without access to parking, which can help determine if additional parking spaces are needed. If a hall shows a large number of students without parking, it may indicate a need to expand parking options or provide alternative transportation services.
 
-QUERY 4 - RAAssignments <br>
+**QUERY 4 - RAAssignments** <br>
 WITH ra_boss AS (SELECT DISTINCT studentID, studentName FROM Students <br>
 WHERE studentID IN (SELECT DISTINCT raID FROM Students)), ra_worker AS (SELECT * FROM Students) <br>
 SELECT ra_boss.studentName AS "RA", ra_worker.studentName AS "Student" <br>
@@ -96,7 +97,7 @@ ORDER BY ra_boss.studentName, ra_worker.studentName; <br>
 
 Query 4 allows managers to see which students are Resident Assistants (RAs) and which students are under their supervision. This helps managers visualize the hierarchical structure of RAs and their assigned residents, ensuring that each student is appropriately paired with an RA. Organizing the results by RA name makes it easier to see who manages which students and confirm that all residents are accounted for.
 
-QUERY 5 - StudentMaintenanceRequests <br>
+**QUERY 5 - StudentMaintenanceRequests** <br>
 SELECT Students.studentName, Rooms.roomID, MaintainanceRequests.requestID FROM Students <br>
 JOIN DormFloor ON Students.floorID = DormFloor.floorID <br>
 JOIN Rooms ON DormFloor.floorID = Rooms.DormFloor_floorID <br>
@@ -107,7 +108,7 @@ ORDER BY Students.studentName, MaintainanceRequests.requestID; <br>
 
 Query 5 allows managers to identify which students have maintenance requests connected to their rooms. This can be used to track which rooms are experiencing issues and which students are affected. By listing students alongside their room IDs and maintenance request IDs, managers can easily follow up with the responsible staff and ensure that requests are resolved promptly.
 
-QUERY 6 - StaffRequests <br>
+**QUERY 6 - StaffRequests** <br>
 SELECT UGAstaff.staffName, ResidenceHall.address, COUNT(MaintainanceRequests.requestID) AS NumRequests FROM MaintainanceRequests <br>
 JOIN UGAstaff ON MaintainanceRequests.staffID = UGAstaff.staffID <br>
 JOIN Rooms ON MaintainanceRequests.roomID = Rooms.roomID <br>
@@ -120,7 +121,7 @@ ORDER BY UGAstaff.staffName, ResidenceHall.address; <br>
 
 Query 6 allows managers to see which staff members have handled the most maintenance requests in each residence hall. This helps identify which staff are most active or which buildings require the most staff attention. Managers can use this information to evaluate workload distribution, recognize high-performing employees, and ensure that maintenance staff are allocated effectively across all halls.
 
-QUERY 7 - GetAllRequests <br>
+**QUERY 7 - GetAllRequests** <br>
 SELECT MaintainanceRequests.requestID, MaintainanceRequests.roomID, UGAstaff.staffName, UGAstaff.staffPhone <br>
 FROM MaintainanceRequests <br>
 JOIN UGAstaff ON MaintainanceRequests.staffID = UGAstaff.staffID; <br>
@@ -129,7 +130,7 @@ JOIN UGAstaff ON MaintainanceRequests.staffID = UGAstaff.staffID; <br>
 
 Query 7 allows managers to view all maintenance requests along with the staff member responsible for each one. This provides an easy way to match staff names and contact information to specific requests, allowing managers to follow up on progress or assign new tasks efficiently.
 
-QUERY 8 - StudentsWithParking <br>
+**QUERY 8 - StudentsWithParking** <br>
 SELECT studentName, <br>
 (SELECT lotLocation FROM Parking  <br>
 WHERE Parking.studentID = Students.studentID) AS lotLocation <br>
@@ -141,7 +142,7 @@ WHERE Parking.studentID = Students.studentID);
 
 Query 8 allows managers to see which students have parking spaces and where those spaces are located. This can help the management team confirm that parking assignments are accurate and up to date. It also ensures that only students who actually have parking spots appear in the results, simplifying record verification.
 
-QUERY 9 - RoomLocations <br>
+**QUERY 9 - RoomLocations** <br>
 SELECT Rooms.roomID, DormFloor.floorNumber, ResidenceHall.address <br>
 FROM Rooms <br>
 JOIN DormFloor ON Rooms.DormFloor_floorID = DormFloor.floorID <br>
@@ -151,7 +152,7 @@ JOIN ResidenceHall ON DormFloor.residenceHallID = ResidenceHall.residenceHallID;
 
 Query 9 allows managers to view which rooms belong to which floors and which residence halls. This provides a clear understanding of the building layout and structure. It helps management easily identify where each room is located, which is useful for maintenance, inspections, or housing assignments.
 
-QUERY 10 - StudentRooms <br>
+**QUERY 10 - StudentRooms** <br>
 SELECT Students.studentName, Rooms.roomID FROM Students <br>
 JOIN DormFloor ON Students.floorID = DormFloor.floorID <br>
 JOIN Rooms ON DormFloor.floorID = Rooms.DormFloor_floorID;
