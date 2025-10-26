@@ -4,7 +4,7 @@ Team Name
 59925 Group 3
 
 Team Members:
-David Kenny @djk42296
+David Kenny @djk42296 <br>
 Sahasra Manchikanti @sahasra-22
 Grant Harris
 Joseph Enck
