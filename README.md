@@ -22,5 +22,25 @@ Data Model: <br>
 
 <img width="1041" height="584" alt="MIST 4610 Project 1 Data Model" src="https://github.com/user-attachments/assets/44f5ebf1-4877-4ef4-88e6-f19bc57d6e14" />
 
+Data Dictionary
+<img width="659" height="271" alt="Screenshot 2025-10-26 at 3 52 04 PM" src="https://github.com/user-attachments/assets/5ee9afce-da50-4589-9406-426ef031b51f" />
+<img width="659" height="387" alt="Screenshot 2025-10-26 at 3 52 23 PM" src="https://github.com/user-attachments/assets/a0b6425a-7337-453f-a17d-953fcf5ca8f2" />
+<img width="655" height="450" alt="Screenshot 2025-10-26 at 3 52 48 PM" src="https://github.com/user-attachments/assets/d2c08db7-c0b2-4aa4-9cfb-8ab58c96deaf" />
+<img width="652" height="368" alt="Screenshot 2025-10-26 at 3 53 14 PM" src="https://github.com/user-attachments/assets/fb71d065-20e5-4eb2-bc48-d343719b7e57" />
+<img width="655" height="390" alt="Screenshot 2025-10-26 at 3 53 39 PM" src="https://github.com/user-attachments/assets/f343ae80-b315-4ea3-9358-9d32eeb98738" />
+<img width="657" height="258" alt="Screenshot 2025-10-26 at 3 53 53 PM" src="https://github.com/user-attachments/assets/250b58ea-9ef9-4876-bff4-91d29390e8ef" />
+<img width="648" height="435" alt="Screenshot 2025-10-26 at 3 54 17 PM" src="https://github.com/user-attachments/assets/aad41437-9dde-4217-a4cb-193f3a05f3c8" />
+<img width="660" height="539" alt="Screenshot 2025-10-26 at 3 55 02 PM" src="https://github.com/user-attachments/assets/8e346adc-5fe5-4bb3-a58c-5bb44ffe586e" />
+<img width="662" height="353" alt="Screenshot 2025-10-26 at 3 55 23 PM" src="https://github.com/user-attachments/assets/fc556c64-2b71-4bdf-a02b-2c29cc0eb4e9" />
+
+
+
+
+
+
+
+
+
+
 
 
