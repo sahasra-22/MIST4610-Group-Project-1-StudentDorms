@@ -161,6 +161,10 @@ JOIN Rooms ON DormFloor.floorID = Rooms.DormFloor_floorID;
 
 Query 10 allows managers to see which room each student is associated with. This helps confirm that every student is correctly assigned to a room and provides an organized way to verify housing records. It also allows managers to identify which floors and rooms are occupied, assisting with housing capacity planning.
 
+## **Database Information** <br>
+Name of the database: ns_F25MIST4610_59925_Group3
+Additional information: Each query listed above is marked in the database using stored procedures which can be called.
+
 
 
 
