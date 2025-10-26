@@ -1,12 +1,18 @@
 # MIST4610-Group-Project-1-StudentDorms
 Team Name
+
 59925 Group 3
 
-Team Members
+Team Members:
+
 David Kenny @djk42296
+
 Sahasra Manchikanti @sahasra-22
+
 Grant Harris
+
 Joseph Enck
+
 Sofia Drescher
 
 Problem Description:
