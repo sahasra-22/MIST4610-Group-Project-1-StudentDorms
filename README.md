@@ -36,7 +36,7 @@ Data Dictionary:
 <img width="662" height="353" alt="Screenshot 2025-10-26 at 3 55 23 PM" src="https://github.com/user-attachments/assets/fc556c64-2b71-4bdf-a02b-2c29cc0eb4e9" />
 
 
-Queries:
+Queries:<br>
 <img width="680" height="478" alt="Screenshot 2025-10-26 at 3 58 39 PM" src="https://github.com/user-attachments/assets/988d3293-01a6-4e03-934b-3d96f033603e" />
 
 QUERY 1 - ResidenceHallRequests <br>
