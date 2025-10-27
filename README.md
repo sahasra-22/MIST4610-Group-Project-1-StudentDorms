@@ -9,7 +9,7 @@ David Kenny @djk42296 <br>
 Sahasra Manchikanti @sahasra-22 <br>
 Grant Harris @gaharris13 <br>
 Joseph Enck @havemercy74<br>
-Sofia Drescher <br>
+Sofia Drescher @s-drescher
 
 ## **Problem Description:** <br>
 The task at hand is to design and develop a relational database for the overall operations of a university housing system. The primary entity in the model is the Residence Hall entity of the housing system, with each Residence Hall representing an individual dormitory facility that the university owns and maintains across campus. The Residence Hall functions alongside dorm floors, student rooms, resident assistants, maintenance requests, and parking assignments that serve the students living within university housing. We aim to accurately represent these relationships, create sample data, and populate the entities and their corresponding attributes with this information. In addition, we intend to perform functional queries on the data so that they may provide meaningful insight into the housing system and its day-to-day operations.
