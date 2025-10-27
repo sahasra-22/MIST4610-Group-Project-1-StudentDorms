@@ -7,8 +7,8 @@
 ## **Team Members:** <br>
 David Kenny @djk42296 <br>
 Sahasra Manchikanti @sahasra-22 <br>
-Grant Harris <br>
-Joseph Enck <br>
+Grant Harris @gaharris13 <br>
+Joseph Enck @havemercy74<br>
 Sofia Drescher <br>
 
 ## **Problem Description:** <br>
